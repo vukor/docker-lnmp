@@ -27,20 +27,24 @@ How it's work
 Files description
 ================
 
-** scripts **
+scripts
+==========
+
 ``docker-build.sh - build image``
 
 ``docker-start.sh - start container``
 
 ``docker-stop.sh  - stop running container``
 
-** share dirs **
+share dirs
+==========
+
 ``etc - configs files``
 
 ``www - web files``
 
 ``logs - nginx logs``
 
-
-** images **
+docker images
+==========
 ``_images - docker images``
