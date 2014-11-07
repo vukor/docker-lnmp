@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t="docker-lnmp" .
+docker build -t="vukor/docker-lnmp" .
 
 exit 0
 
