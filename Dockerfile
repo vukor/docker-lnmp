@@ -1,4 +1,4 @@
-# Version: 0.0.3
+# Version: 0.0.4
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -18,14 +18,16 @@ ADD ./etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
 ## php
 RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm ImageMagick -y
-# php-fpm, www.conf, php.ini add
+ADD ./etc/php-fpm.conf /etc/php-fpm.conf
+ADD ./etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
+ADD ./etc/php.ini /etc/php.ini
 
-# set user/group dev/www
+## set user/group dev/www
 RUN sed -i 's/user = apache/user = dev/' /etc/php-fpm.d/www.conf
 RUN sed -i 's/group = apache/group = users/' /etc/php-fpm.d/www.conf
 
 
-## main
+## Main
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
