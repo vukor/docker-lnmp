@@ -15,6 +15,10 @@ How it's work
 3. Build docker image docker-lnmp:
 
     ``$ ./docker-build.sh``
+    
+   Or pull already building image:
+   
+    ``$ docker pull vukor/docker-lnmp``
 
 4. Run container:
 
