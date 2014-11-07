@@ -29,13 +29,18 @@ Files description
 
 ** scripts **
 ``docker-build.sh - build image``
+
 ``docker-start.sh - start container``
+
 ``docker-stop.sh  - stop running container``
 
 ** share dirs **
 ``etc - configs files``
+
 ``www - web files``
+
 ``logs - nginx logs``
+
 
 ** images **
 ``_images - docker images``
