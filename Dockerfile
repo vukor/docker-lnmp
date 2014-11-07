@@ -1,4 +1,4 @@
-# Version: 0.0.4
+# Version: 0.0.5
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -8,7 +8,7 @@ MAINTAINER Anton Bugreev <anton@bugreev.ru>
 #RUN mysql_install_db
 # my.cnf add
 
-## users
+## create user dev
 RUN useradd -u 1026 dev -g 100
 
 ## nginx
@@ -21,10 +21,6 @@ RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm ImageMagick -y
 ADD ./etc/php-fpm.conf /etc/php-fpm.conf
 ADD ./etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 ADD ./etc/php.ini /etc/php.ini
-
-## set user/group dev/www
-RUN sed -i 's/user = apache/user = dev/' /etc/php-fpm.d/www.conf
-RUN sed -i 's/group = apache/group = users/' /etc/php-fpm.d/www.conf
 
 
 ## Main

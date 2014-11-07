@@ -12,3 +12,5 @@
 172.17.42.1 - - [07/Nov/2014:09:18:56 +0000] "GET /htester/?? HTTP/1.1" 200 2247 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36" "-"
 172.17.42.1 - - [07/Nov/2014:09:18:56 +0000] "GET /htester/design.css HTTP/1.1" 200 1318 "http://localhost/htester/??" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36" "-"
 172.17.42.1 - - [07/Nov/2014:09:18:56 +0000] "GET /htester/?gd_test HTTP/1.1" 200 541 "http://localhost/htester/??" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36" "-"
+172.17.42.1 - - [07/Nov/2014:09:27:57 +0000] "GET / HTTP/1.1" 502 574 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36" "-"
+172.17.42.1 - - [07/Nov/2014:09:27:58 +0000] "GET / HTTP/1.1" 502 574 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36" "-"
