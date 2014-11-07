@@ -40,6 +40,11 @@ scripts
 
 ``docker-stop.sh  - stop running container``
 
+``docker-reload.sh  - restart running container``
+
+``docker-debug.sh  - start container in debug mode (run only bash)``
+
+
 share dirs
 ==========
 

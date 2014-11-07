@@ -1,0 +1,7 @@
+DirectoryIndex index.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteBase /htester/
+RewriteRule ^.*$ index.php?mod_rewrite_test [L]
