@@ -4,3 +4,7 @@ logs/*
 #projects files
 etc/nginx/hosts/*
 !etc/nginx/hosts/test.conf
+
+www/*
+!www/test
+
