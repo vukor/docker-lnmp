@@ -14,7 +14,7 @@ How it's work
 
 3. Build docker image docker-lnmp:
 
-    ``$ ./dw build``
+    ``$ ./scripts/cmd_build.sh``
     
    Or pull already building image:
    
@@ -22,7 +22,7 @@ How it's work
 
 4. Run container:
 
-    ``$ ./dw start``
+    ``$ ./scripts/cmd_start.sh``
 
 5. Open in your browser page http://localhost/
 
@@ -34,17 +34,13 @@ Files description
 scripts
 ==========
 
-``dw build   - build image``
+``cmd_build.sh - build image``
 
-``dw start   - start container``
+``cmd_start.sh - start container``
 
-``dw stop    - stop running container``
+``cmd_stop.sh  - stop running container``
 
-``dw reload  - restart running container``
-
-``dw debug   - start container in debug mode (run only bash)``
-
-``dw install - make system link on current file (need admin privilegies)``
+``cmd_debug.sh  - start container in debug mode (run only bash)``
 
 
 share dirs
