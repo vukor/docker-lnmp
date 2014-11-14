@@ -1,12 +1,13 @@
-# Version: 0.0.5
+# Version: 0.0.6
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
 ## mysql
-#RUN yum install mysql mysql-server -y
-#RUN mkdir -m 770 /var/log/mysql && chown mysql:mysql /var/log/mysql
-#RUN mysql_install_db
-# my.cnf add
+RUN yum install mysql mysql-server -y
+RUN mkdir -m 770 /var/log/mysql && chown mysql:mysql /var/log/mysql
+RUN mysql_install_db
+#RUN mysql -u root -e "GRANT ALL ON *.* to debug@% identified by '';"
+ADD ./etc/my.cnf /etc/my.cnf
 
 ## create user dev
 RUN useradd dev
@@ -30,6 +31,6 @@ RUN chmod 755 /start.sh
 CMD ["/bin/bash", "/start.sh"]
 
 ## allow ports 
-#EXPOSE 3306
+EXPOSE 3306
 EXPOSE 80
 
