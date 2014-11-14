@@ -9,7 +9,7 @@ MAINTAINER Anton Bugreev <anton@bugreev.ru>
 # my.cnf add
 
 ## create user dev
-RUN useradd -u dev
+RUN useradd dev
 
 ## nginx
 RUN rpm -Uvh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
