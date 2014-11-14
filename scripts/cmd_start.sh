@@ -1,4 +1,8 @@
 #!/bin/sh
+
+## set correct permissions
+chown -R `id`:`gid` PWD/www/ PWD/logs
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 docker run -d \
 	-p 80:80 \

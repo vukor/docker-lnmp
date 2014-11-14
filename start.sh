@@ -5,8 +5,8 @@
 /usr/sbin/php-fpm --daemonize -c /etc/php.ini
 
 ## set correct perm
-chown -R dev:users /home/dev/logs
-chown -R dev:users /home/dev/www
+#chown -R dev:users /home/dev/logs
+#chown -R dev:users /home/dev/www
 
 ## start nginx
 /usr/sbin/nginx -c /etc/nginx/nginx.conf
