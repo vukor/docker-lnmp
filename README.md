@@ -4,7 +4,7 @@ docker-lnmp
 This is a Dockerfile for build and run web-applications installed on Nginx + PHP-FPM + MySQL
 
 How it's work
-================
+===========
 
 1. Download Dockerfile:
 
@@ -12,48 +12,44 @@ How it's work
 
 2. Install docker on your system
 
-3. Build docker image docker-lnmp:
+3. Install dw, this command will be use for manage docker container "vukor/docker-lnmp":
 
-    ``$ ./docker-build.sh``
+    ``$ cd docker-lnmp/``
+    ``$ sudo dw install`` ( for GNU/Linux users )
+    ``$ sudo dw-macos install`` ( for Mac OSX users)
+
+4. Build docker image docker-lnmp:
+
+    ``$ dw build``
     
    Or pull already building image:
    
     ``$ docker pull vukor/docker-lnmp``
 
-4. Run container:
+5. Set MYSQL_LOGIN / MYSQL_PASSWORD for MySQL app in docker-lnmp/scripts/cmd_start.sh
 
-    ``$ ./docker-start.sh``
+6. Run container:
 
-5. Open in your browser page http://localhost/
+    ``$ dw start``
+
+7. For test nginx open in your browser page http://localhost/
+
+8. For test MySQL run on local host
+ 
+``mysql -h YOUR-IP-ADDRESS -u MYSQL_LOGIN -pMYSQL_PASSWORD mysql``
 
 
+Help
+===========
 
-Files description
-================
-
-scripts
-==========
-
-``docker-build.sh - build image``
-
-``docker-start.sh - start container``
-
-``docker-stop.sh  - stop running container``
-
-``docker-reload.sh  - restart running container``
-
-``docker-debug.sh  - start container in debug mode (run only bash)``
+Run dw -h for using help
 
 
 share dirs
-==========
+===========
 
 ``etc - configs files``
 
 ``www - web files``
 
 ``logs - nginx logs``
-
-docker images
-==========
-``_images - docker images``
