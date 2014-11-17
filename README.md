@@ -12,14 +12,13 @@ How it's work
 
 2. Install docker on your system
 
-3. Install dw, this command will be use for manage docker container "vukor/docker-lnmp":
+3. Install dw for managing docker container "vukor/docker-lnmp":
 
     ``$ cd docker-lnmp/``
     
     ``$ sudo dw install`` ( for GNU/Linux users )
     
-    ``$ sudo dw-macos install`` ( for Mac OSX users)
-    
+    ``$ sudo dw-macos install`` ( for Mac OSX users )
 
 4. Build docker image docker-lnmp:
 
