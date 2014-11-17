@@ -39,7 +39,7 @@ How it's work
 
 8. For test MySQL run on local host
  
-``mysql -h YOUR-IP-ADDRESS -u MYSQL_LOGIN -pMYSQL_PASSWORD mysql``
+    ``mysql -h YOUR-IP-ADDRESS -u MYSQL_LOGIN -pMYSQL_PASSWORD mysql``
 
 
 Help
