@@ -6,6 +6,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 chown -R `id -u`:`id -g` "$DIR"/../www/ "$DIR"/../logs/
 
 docker run -d \
+	-e MYSQL_LOGIN="debug" \
+	-e MYSQL_PASSWORD="123123" \
 	-p 80:80 \
 	-p 3306:3306 \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \
