@@ -2,9 +2,6 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-## set correct permissions
-chown -R `id -u`:`id -g` "$DIR"/../www/ "$DIR"/../logs/
-
 docker run -d \
 	-e MYSQL_LOGIN="" \
 	-e MYSQL_PASSWORD="" \

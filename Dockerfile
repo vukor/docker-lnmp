@@ -10,7 +10,7 @@ RUN mysql_install_db
 ADD ./etc/my.cnf /etc/my.cnf
 
 ## create user dev
-RUN useradd dev
+RUN useradd dev -u 1000
 
 ## nginx
 RUN rpm -Uvh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
