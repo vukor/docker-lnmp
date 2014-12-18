@@ -22,7 +22,6 @@ ADD ./etc/php-fpm.conf /etc/php-fpm.conf
 ADD ./etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 ADD ./etc/php.ini /etc/php.ini
 
-
 ## Main
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
