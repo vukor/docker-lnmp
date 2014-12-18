@@ -3,6 +3,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 docker run -t -i \
 	-p 80:80 \
 	-p 3306:3306 \
+	--volumes-from mysql_data \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \
 	-v "$DIR"/../etc/nginx/hosts/:/etc/nginx/hosts/ \
 	-v "$DIR"/../etc/php-fpm.conf:/etc/php-fpm.conf \
