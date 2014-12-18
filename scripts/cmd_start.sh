@@ -3,8 +3,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 docker run -d \
-	-e MYSQL_LOGIN="" \
-	-e MYSQL_PASSWORD="" \
+	-e MYSQL_LOGIN="test" \
+	-e MYSQL_PASSWORD="test" \
+	--volumes-from mysql_data \
 	-p 80:80 \
 	-p 3306:3306 \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \

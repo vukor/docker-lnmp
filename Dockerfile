@@ -1,4 +1,4 @@
-# Version: 0.0.6
+# Version: 0.0.7
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -6,7 +6,6 @@ MAINTAINER Anton Bugreev <anton@bugreev.ru>
 RUN yum install mysql mysql-server -y
 RUN mkdir -m 770 /var/log/mysql && chown mysql:mysql /var/log/mysql
 RUN mysql_install_db
-#RUN mysql -u root -e "GRANT ALL ON *.* to debug@% identified by '';"
 ADD ./etc/my.cnf /etc/my.cnf
 
 ## create user dev
