@@ -16,9 +16,9 @@ How it's work
 
     ``$ cd docker-lnmp/``
     
-    ``$ sudo dw install`` ( for GNU/Linux users )
+    ``$ sudo ./dw install`` ( for GNU/Linux users )
     
-    ``$ sudo dw-macos install`` ( for Mac OSX users )
+    ``$ sudo ./dw-macos install`` ( for Mac OSX users )
 
 4. Build docker image docker-lnmp:
 
