@@ -6,7 +6,7 @@ server {
 	access_log /home/dev/logs/PRJ_NAME.access.log  main;
 	error_log /home/dev/logs/PRJ_NAME.error.log  warn;
 	
-	root  /home/dev/www/PRJ_NAME/www/;
+	root  /home/dev/www/PRJ_NAME/DOC_ROOT_DIR;
 	index  index.php;
 
 	## rewrite rules
