@@ -8,13 +8,13 @@ How it's work
 
 1. Download Dockerfile:
 
-    ``$ git clone https://vukor@github.com/vukor/docker-lnmp.git``
+    ``$ git clone https://vukor@github.com/vukor/docker-lnmp.git ~/docker``
 
 2. Install docker on your system
 
 3. Install dw for managing docker container "vukor/docker-lnmp":
 
-    ``$ cd docker-lnmp/``
+    ``$ cd ~/docker/``
     
     ``$ sudo ./dw install`` ( for GNU/Linux users )
     
@@ -59,3 +59,4 @@ share dirs
 ``www - web files``
 
 ``logs - nginx logs``
+
