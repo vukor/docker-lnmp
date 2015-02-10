@@ -17,10 +17,21 @@ RUN yum install nginx -y
 ADD ./etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
 ## php
-RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm ImageMagick -y
+RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm php-mssql php-xml ImageMagick -y
 ADD ./etc/php-fpm.conf /etc/php-fpm.conf
 ADD ./etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 ADD ./etc/php.ini /etc/php.ini
+
+## postfix
+RUN yum install postfix -y
+RUN chmod 5755 /usr/sbin/postdrop /usr/sbin/postqueue
+
+## rsyslog
+RUN yum install rsyslog -y
+
+### etc
+## set timezone
+RUN cp -f /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime
 
 ## Main
 ADD ./start.sh /start.sh

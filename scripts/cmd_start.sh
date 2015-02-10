@@ -14,6 +14,7 @@ docker run -d \
 	-v "$DIR"/../etc/php-fpm.d/:/etc/php-fpm.d/ \
 	-v "$DIR"/../etc/php.ini:/etc/php.ini \
 	-v "$DIR"/../etc/my.cnf:/etc/my.cnf \
+	-v "$DIR"/../etc/postfix/main.cf:/etc/postfix/main.cf \
 	-v "$DIR"/../www:/home/dev/www \
 	-v "$DIR"/../logs:/home/dev/logs \
 	vukor/docker-lnmp

@@ -1,3 +1,6 @@
+## start rsyslog
+service rsyslog start
+
 ## start mysql
 service mysqld start
 
@@ -7,6 +10,9 @@ sleep 1
 
 ## start php-fpm
 service php-fpm start
+
+## start postfix
+service postfix start
 
 ## start nginx
 service nginx start
