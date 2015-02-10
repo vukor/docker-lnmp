@@ -1,7 +1,3 @@
-#exclude temp
-logs/*
-mysql/*
-
 #projects files
 etc/nginx/hosts/*
 !etc/nginx/hosts/test.conf
