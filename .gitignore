@@ -7,3 +7,6 @@ www/*
 !www/test
 
 .idea
+
+logs/*
+!logs/.keep
