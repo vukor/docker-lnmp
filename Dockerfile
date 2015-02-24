@@ -2,6 +2,9 @@
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
+## repo
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+
 ## mysql
 RUN yum install mysql mysql-server -y
 RUN mkdir -m 770 /var/log/mysql && chown mysql:mysql /var/log/mysql
