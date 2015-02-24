@@ -1,5 +1,6 @@
-#!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#!/bin/sh
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
 docker run -t -i \
 	-p 80:80 \
 	-p 3306:3306 \
