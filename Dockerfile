@@ -3,7 +3,7 @@ FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
 ## repo
-rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+RUN yum install wget -y && cd /tmp/ && wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && rpm -Uvh ./epel-release-6*rpm
 
 ## mysql
 RUN yum install mysql mysql-server -y
