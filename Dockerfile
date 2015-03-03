@@ -1,4 +1,4 @@
-# Version: 0.0.7
+# Version: 0.8
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -35,6 +35,7 @@ RUN yum install rsyslog -y
 ### etc
 ## set timezone
 RUN cp -f /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime
+RUN ln -s /usr/bin/identify /usr/local/bin/identify && ln -s /usr/bin/convert /usr/local/bin/convert
 
 ## Main
 ADD ./start.sh /start.sh
