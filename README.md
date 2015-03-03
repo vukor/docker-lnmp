@@ -6,7 +6,7 @@ This is a Dockerfile for build and run web-applications installed on Nginx + PHP
 How it's work
 ===========
 
-1. Download Dockerfile:
+1. Download project:
 
     ``$ git clone https://vukor@github.com/vukor/docker-lnmp.git ~/docker``
 
