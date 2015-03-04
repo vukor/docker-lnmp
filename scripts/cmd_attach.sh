@@ -7,12 +7,11 @@ if [ "$id" = "" ]; then
   exit 1
 fi
 
-#docker ps -q && exit 1
-
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 SSH_KEY="$DIR/../.ssh/id_rsa"
 IP_ADDRESS=`docker ps -q | head -n1 | xargs docker inspect |grep 'IPAddress' | cut -d '"' -f 4`
 
+chmod 400 "$SSH_KEY"
 ssh -i "$SSH_KEY" -l dev -q "$IP_ADDRESS"
 
 exit 0
