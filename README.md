@@ -30,7 +30,7 @@ How it's work
 
 5. Create mysql_data container:
  
-    ``docker run -i -t --name mysql_data vukor/docker-data``
+    ``$ docker run -i -t --name mysql_data vukor/docker-data``
 
 6. Set MYSQL_LOGIN / MYSQL_PASSWORD for MySQL app in docker-lnmp/scripts/cmd_start.sh
 
@@ -42,8 +42,11 @@ How it's work
 
 9. For test MySQL run on local host
  
-    ``mysql -h YOUR-IP-ADDRESS -u MYSQL_LOGIN -pMYSQL_PASSWORD mysql``
+    ``$ mysql -h YOUR-IP-ADDRESS -u MYSQL_LOGIN -pMYSQL_PASSWORD mysql``
 
+10. For access to running container over ssh run on your host:
+
+    ``$ dw attach``
 
 Help
 ===========

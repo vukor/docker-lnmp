@@ -1,6 +1,9 @@
 ## start rsyslog
 service rsyslog start
 
+## start ssh
+service sshd start
+
 ## start mysql
 service mysqld start
 

@@ -17,4 +17,5 @@ docker run -d \
 	-v "$DIR"/../etc/postfix/main.cf:/etc/postfix/main.cf \
 	-v "$DIR"/../www:/home/dev/www \
 	-v "$DIR"/../logs:/home/dev/logs \
+	-v "$DIR"/../.ssh:/home/dev/.ssh \
 	vukor/docker-lnmp

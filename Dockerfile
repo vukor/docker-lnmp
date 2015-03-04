@@ -1,9 +1,13 @@
-# Version: 0.8
+# Version: 1.0
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
 ## repo
 RUN yum install wget -y && cd /tmp/ && wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && rpm -Uvh ./epel-release-6*rpm
+
+## ssh
+RUN yum install openssh-server -y
+RUN sed -i 's/PasswordAuthentication\ yes/PasswordAuthentication\ no/' /etc/ssh/sshd_config && echo 'AllowUsers dev' >> /etc/ssh/sshd_config
 
 ## mysql
 RUN yum install mysql mysql-server -y
