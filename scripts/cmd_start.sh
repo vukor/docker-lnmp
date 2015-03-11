@@ -7,6 +7,7 @@ docker run -d \
 	-e MYSQL_PASSWORD="test" \
 	--volumes-from mysql_data \
 	-p 80:80 \
+	-p 443:443 \
 	-p 3306:3306 \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \
 	-v "$DIR"/../etc/nginx/hosts/:/etc/nginx/hosts/ \

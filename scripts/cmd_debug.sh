@@ -3,6 +3,7 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 docker run -t -i \
 	-p 80:80 \
+	-p 443:443 \
 	-p 3306:3306 \
 	--volumes-from mysql_data \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \
