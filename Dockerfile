@@ -1,9 +1,11 @@
-# Version: 1.0
+# Version: 1.0.1
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
 ## repo
 RUN yum install wget -y && cd /tmp/ && wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && rpm -Uvh ./epel-release-6*rpm
+# needs to install php 5.4
+RUN wget -q -O - http://www.atomicorp.com/installers/atomic | sed 's/!\ $NON_INT/$NON_INT/' | sh
 
 ## ssh
 RUN yum install openssh-server -y
