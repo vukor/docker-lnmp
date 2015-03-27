@@ -43,7 +43,11 @@ RUN yum install rsyslog -y
 RUN cp -f /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime
 RUN ln -s /usr/bin/identify /usr/local/bin/identify && ln -s /usr/bin/convert /usr/local/bin/convert
 
-## Main
+## volumes
+VOLUME ["/home/dev/www"]
+VOLUME ["/home/dev/logs"]
+
+## main
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 

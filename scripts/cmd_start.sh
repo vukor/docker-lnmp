@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 docker run -d \
 	-e MYSQL_LOGIN="test" \
 	-e MYSQL_PASSWORD="test" \
-	--volumes-from mysql_data \
+	--volumes-from docker-data \
 	-p 80:80 \
 	-p 443:443 \
 	-p 3306:3306 \
