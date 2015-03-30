@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-docker run --name=docker-lnmp -d \
+docker run -d \
 	-e MYSQL_LOGIN="test" \
 	-e MYSQL_PASSWORD="test" \
 	--volumes-from docker-data \
