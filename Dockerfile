@@ -1,4 +1,4 @@
-# Version: 1.0.2
+# Version: 1.0.3
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -43,11 +43,25 @@ RUN yum install rsyslog -y
 RUN cp -f /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime
 RUN ln -s /usr/bin/identify /usr/local/bin/identify && ln -s /usr/bin/convert /usr/local/bin/convert
 
-## volumes
-VOLUME ["/home/dev/www"]
-VOLUME ["/home/dev/logs"]
+### volumes
 
-## main
+## nginx virtual hosts
+VOLUME ["/etc/nginx/hosts/"]
+
+## php-fpm
+VOLUME ["/etc/php-fpm.d/"]
+
+## web sites
+VOLUME ["/home/dev/www/"]
+
+## web logs
+VOLUME ["/home/dev/logs/"]
+
+## ssh pub key
+VOLUME ["/home/dev/.ssh"]
+
+
+### main
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
