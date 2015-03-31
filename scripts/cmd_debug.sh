@@ -1,7 +1,7 @@
 #!/bin/sh
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-docker run -t -i \
+docker run --name=docker-lnmp -t -i \
 	-p 80:80 \
 	-p 443:443 \
 	-p 3306:3306 \

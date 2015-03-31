@@ -1,9 +1,6 @@
 #!/bin/sh
 
-DIR="$( cd "$( dirname "$0" )" && pwd )"
-
-"$DIR"/cmd_stop.sh
-"$DIR"/cmd_start.sh
+docker restart $(docker ps -q) 
 
 exit 0
 

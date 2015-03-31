@@ -1,2 +1,7 @@
 #!/bin/sh
-docker stop `docker ps -q`
+
+id=$(docker ps -q)
+
+docker stop $id
+docker rm $id
+

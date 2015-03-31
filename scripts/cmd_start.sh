@@ -2,7 +2,11 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-docker run -d \
+## create docker-data container if does not exist
+( docker ps -a |grep 'docker-data' ) || ( docker run --name docker-data -i -t vukor/docker-data )
+
+## start docker-lnmp container
+docker run --name=docker-lnmp -d \
 	-e MYSQL_LOGIN="test" \
 	-e MYSQL_PASSWORD="test" \
 	--volumes-from docker-data \
