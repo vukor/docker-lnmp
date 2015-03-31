@@ -3,7 +3,10 @@
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 ## create docker-data container if does not exist
-( docker ps -a |grep 'docker-data' ) || ( docker run --name docker-data -i -t vukor/docker-data )
+( docker ps -a |grep 'docker-data' >/dev/null ) || ( docker run --name docker-data -i -t vukor/docker-data )
+
+## delete docker-lnmp container
+( docker ps -a |grep 'docker-lnmp' >/dev/null ) && ( docker rm docker-lnmp )
 
 ## start docker-lnmp container
 docker run --name=docker-lnmp -d \

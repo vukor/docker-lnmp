@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker restart $(docker ps -q) 
+docker restart docker-lnmp 
 
 exit 0
 
