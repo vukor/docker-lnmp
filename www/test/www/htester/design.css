@@ -1,0 +1,32 @@
+html, body {background: #f5f5f5; font-family: 'Trebuchet MS', sans-serif; font-size: 14px; padding: 0; margin: 0;}
+body {padding: 0 0 0 2.5%;}
+
+ul {padding: 0; margin: 0 2.5% 0 0; list-style: none; float: left; width: 30%; overflow: auto;}
+	li {margin: 0 0 8px; padding: 2px 8px 3px;}
+	li.h1 {font-weight: bold; font-size: 16px; margin: 5px 0 0; padding: 0 8px 5px;}
+	li.ok {background-color: #8e8;}
+	li.note {background-color: #c99;}
+	li.error {background-color: #e55;}
+	li.info {background-color: #ddd;}
+
+img {vertical-align: middle;}
+
+a:link {color: #009; text-decoration: underline;}
+a:visited {color: #909; text-decoration: underline;}
+a:hover, a:active {text-decoration: none;}
+
+p {margin: 0; padding: 0;}
+	p.main span {font-weight: bold; font-size: 13px;}
+	p.main span.tooltip {font-weight: normal; font-size: 14px; border-bottom: 1px dashed #999;}
+p.more {font-size: 12px;}
+	p.more span {font-style: italic;}
+p.message {color: #0c0;}
+p.error {color: #c00;}
+
+form {font-size: 13px;}
+	label {display: inline-block; width: 80px; text-align: right;}
+	label.forCheckbox {display: inline; width: auto;}
+	input {font-family: Consolas, monospace; font-size: 13px;}
+	input[type="submit"] {margin: 0 0 0 82px;}
+
+code {font-family: Consolas, monospace; font-size: 13px; font-style: normal;}

@@ -1,4 +1,4 @@
-# Version: 1.0.3
+## Version: 1.0.4
 FROM centos:centos6
 MAINTAINER Anton Bugreev <anton@bugreev.ru>
 
@@ -26,7 +26,7 @@ RUN yum install nginx -y
 ADD ./etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
 ## php
-RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm php-mssql php-xml ImageMagick -y
+RUN yum install php php-cli php-mysql php-mbstring php-gd php-fpm php-mssql php-xml php-tidy ImageMagick -y
 ADD ./etc/php-fpm.conf /etc/php-fpm.conf
 ADD ./etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 ADD ./etc/php.ini /etc/php.ini
@@ -42,6 +42,7 @@ RUN yum install rsyslog -y
 ## set timezone
 RUN cp -f /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime
 RUN ln -s /usr/bin/identify /usr/local/bin/identify && ln -s /usr/bin/convert /usr/local/bin/convert
+RUN yum install which -y
 
 ### volumes
 
