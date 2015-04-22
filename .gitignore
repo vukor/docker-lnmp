@@ -1,7 +1,7 @@
 #projects files
 etc/nginx/hosts/*
 !etc/nginx/hosts/test.conf
-!etc/nginx/hosts/template.conf
+!etc/nginx/hosts/template-conf
 
 www/*
 !www/test
