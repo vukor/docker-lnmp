@@ -13,6 +13,8 @@ docker run --name=docker-lnmp -t -i --rm=true \
 	-p 80:80 \
 	-p 443:443 \
 	-p 3306:3306 \
+	-e MYSQL_LOGIN="test" \
+	-e MYSQL_PASSWORD="test" \
 	--volumes-from docker-data \
 	-v "$DIR"/../etc/nginx/nginx.conf:/etc/nginx/nginx.conf \
 	-v "$DIR"/../etc/nginx/hosts/:/etc/nginx/hosts/ \
