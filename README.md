@@ -1,4 +1,4 @@
-docker-lnmp
+docker-lnmp (DEPRECATED, see below section)
 ===========
 
 This is a Dockerfile for build and run web-applications installed on Nginx + PHP-FPM + MySQL
@@ -63,3 +63,7 @@ share dirs
 
 ``logs - nginx logs``
 
+
+Deprecated
+===========
+This project is deprecated, use https://github.com/vukor/docker-web-stack
